@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import ImageComponent from "./ImageComponent";
 
 function App() {
+  const [url, setUrl] = useState("");
+  const onChange = (e) => {
+    setUrl(e.target.value);
+  };
+  console.log(url);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Subir archivo</h2>
+      <label htmlFor="">imagen</label>
+      <input type="text" onChange={(e) => onChange(e)} />
+      <br />
+      <ImageComponent>
+        <div
+          className="contenedor-imagen"
+          style={{ backgroundImage: `url(${url})` }}
+        />
+      </ImageComponent>
     </div>
   );
 }

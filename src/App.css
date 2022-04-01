@@ -37,18 +37,17 @@
   }
 }
 
-.contenedor-imagen{
-  margin: auto  ;
-  background-color: black;
-  width: 640px;
-  height:640px;
-  background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.imagen{
+.contenedor-imagen {
+  margin: auto;
   width: 640px;
   height: 640px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+}
 
+.imagen {
+  width: 640px;
+  height: 640px;
 }
